@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f06, #ffeb3b);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    animation: rotate 15s infinite linear;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.calculator {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    z-index: 10;
+}
+
+.display {
+    font-size: 2.5em;
+    text-align: right;
+    padding: 15px;
+    background-color: #222;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.btn:active {
+    background-color: #555;
+    transform: scale(0.98);
+}
+
+#clear {
+    background-color: #d9534f;
+}
+
+#clear:hover {
+    background-color: #c9302c;
+}
+
+#clear:active {
+    background-color: #ac2925;
+}
+
+#delete {
+    background-color: #f0ad4e;
+}
+
+#delete:hover {
+    background-color: #ec971f;
+}
+
+#delete:active {
+    background-color: #d58512;
+}
